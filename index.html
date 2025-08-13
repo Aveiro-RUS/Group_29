@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS Price Compare - Сравнение цен игр PlayStation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fab fa-playstation"></i>
+                    <h1>PS Price Compare</h1>
+                </div>
+                <nav class="nav">
+                    <a href="#" class="nav-link active">Главная</a>
+                    <a href="#" class="nav-link">О проекте</a>
+                    <a href="#" class="nav-link">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="hero">
+                <h2>Сравнивайте цены игр PlayStation в разных регионах</h2>
+                <p>Найдите лучшие предложения и сэкономьте на покупке игр</p>
+            </section>
+
+            <section class="search-section">
+                <div class="search-container">
+                    <input type="text" id="gameSearch" placeholder="Введите название игры..." class="search-input">
+                    <button id="searchBtn" class="search-btn">
+                        <i class="fas fa-search"></i>
+                        Найти
+                    </button>
+                </div>
+            </section>
+
+            <section class="filters">
+                <div class="filter-group">
+                    <label for="sortSelect">Сортировка:</label>
+                    <select id="sortSelect" class="filter-select">
+                        <option value="price-desc">По убыванию цены</option>
+                        <option value="price-asc">По возрастанию цены</option>
+                        <option value="region">По региону</option>
+                        <option value="name">По названию</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="currencySelect">Валюта:</label>
+                    <select id="currencySelect" class="filter-select">
+                        <option value="both">Все валюты</option>
+                        <option value="usd">Только USD</option>
+                        <option value="local">Только местные</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="results" id="results">
+                <div class="loading" id="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Поиск игр...</p>
+                </div>
+                <div class="no-results" id="noResults" style="display: none;">
+                    <i class="fas fa-gamepad"></i>
+                    <p>Игра не найдена. Попробуйте другое название.</p>
+                </div>
+                <div class="games-grid" id="gamesGrid" style="display: none;"></div>
+            </section>
+
+            <section class="popular-games">
+                <h3>Популярные игры</h3>
+                <div class="popular-grid">
+                    <div class="popular-game" data-game="God of War Ragnarök">
+                        <img src="https://via.placeholder.com/200x120/1f2937/ffffff?text=God+of+War" alt="God of War Ragnarök">
+                        <h4>God of War Ragnarök</h4>
+                    </div>
+                    <div class="popular-game" data-game="Spider-Man 2">
+                        <img src="https://via.placeholder.com/200x120/1f2937/ffffff?text=Spider-Man+2" alt="Spider-Man 2">
+                        <h4>Spider-Man 2</h4>
+                    </div>
+                    <div class="popular-game" data-game="Final Fantasy XVI">
+                        <img src="https://via.placeholder.com/200x120/1f2937/ffffff?text=FF+XVI" alt="Final Fantasy XVI">
+                        <h4>Final Fantasy XVI</h4>
+                    </div>
+                    <div class="popular-game" data-game="Baldur's Gate 3">
+                        <img src="https://via.placeholder.com/200x120/1f2937/ffffff?text=BG+3" alt="Baldur's Gate 3">
+                        <h4>Baldur's Gate 3</h4>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 PS Price Compare. Сравнивайте цены игр PlayStation по всему миру.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
